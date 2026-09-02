@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chamados | HelpDesk</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav class="navbar">
+  <a href="dashboard.html" class="navbar-brand">Help<span>Desk</span></a>
+  <div class="navbar-links">
+    <a href="dashboard.html">Dashboard</a>
+    <a href="meus-chamados.html">Chamados</a>
+    <a href="novo-chamado.html">Abrir chamado</a>
+    <span class="navbar-user" id="nome-usuario-logado"></span>
+    <button id="btn-logout" class="btn-nav-sair">Sair</button>
+  </div>
+</nav>
+<main class="container">
+  <div class="page-heading">
+    <h1>Chamados</h1>
+    <a href="novo-chamado.html" class="btn btn-primary">+ Abrir chamado</a>
+  </div>
+  <div class="filtros">
+    <select id="filtro-status">
+      <option value="">Todos os status</option>
+      <option value="Aberto">Aberto</option>
+      <option value="Em Atendimento">Em Atendimento</option>
+      <option value="Concluído">Concluído</option>
+    </select>
+  </div>
+  <table class="table">
+    <thead><tr><th>Titulo</th><th>Status</th><th>Prioridade</th><th>Aberto em</th></tr></thead>
+    <tbody id="tabela-chamados"></tbody>
+  </table>
+</main>
+<footer class="footer">HelpDesk &copy; 2026 - Suporte Tecnico</footer>
+<script src="js/config.js"></script>
+<script src="js/api.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/chamados.js"></script>
+</body>
+</html>

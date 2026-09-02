@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Novo chamado | HelpDesk</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav class="navbar">
+  <a href="dashboard.html" class="navbar-brand">Help<span>Desk</span></a>
+  <div class="navbar-links">
+    <a href="dashboard.html">Dashboard</a>
+    <a href="meus-chamados.html">Chamados</a>
+    <a href="novo-chamado.html">Abrir chamado</a>
+    <span class="navbar-user" id="nome-usuario-logado"></span>
+    <button id="btn-logout" class="btn-nav-sair">Sair</button>
+  </div>
+</nav>
+<main class="container container-form">
+  <div class="card">
+    <h1>Abrir chamado</h1>
+    <div id="mensagem-erro" class="alert alert-erro"></div>
+    <form id="form-novo-chamado">
+      <label for="titulo">Titulo</label>
+      <input type="text" id="titulo" required>
+      <label for="descricao">Descricao</label>
+      <textarea id="descricao" rows="4" required></textarea>
+      <label for="prioridade">Prioridade</label>
+      <select id="prioridade">
+        <option value="Baixa">Baixa</option>
+        <option value="Media" selected>Media</option>
+        <option value="Alta">Alta</option>
+      </select>
+      <button type="submit" class="btn btn-primary btn-full">Abrir chamado</button>
+    </form>
+  </div>
+</main>
+<footer class="footer">HelpDesk &copy; 2026 - Suporte Tecnico</footer>
+<script src="js/config.js"></script>
+<script src="js/api.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/chamados.js"></script>
+</body>
+</html>
